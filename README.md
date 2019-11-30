@@ -6,6 +6,8 @@ A library that adds Clojure testing functionality to assert details about thrown
 
 ## Usage
 
+[![Clojars Project](https://img.shields.io/clojars/v/net.valerauko/harinezumi.svg)](https://clojars.org/net.valerauko/harinezumi)
+
 Add `net.valerauko/harinezumi` to your dependencies.
 
 Refer to [the tests](https://github.com/valerauko/harinezumi/blob/master/test/harinezumi/core_test.clj) for usage examples.
