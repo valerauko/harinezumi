@@ -19,14 +19,14 @@
                     :actual info#}]
          (->> ~checks
               (reduce
-                (fn [_# [coords# value#]]
-                  (let [actual# (get-in info# coords#)]
-                    (if (not= actual# value#)
-                      (reduced {:type :fail
-                                :message ~msg
-                                :expected (list '~'= (list '~'get-in info# coords#) value#)
-                                :actual (list '~'not= actual# value#)})
-                      pass#)))
-                pass#)
+               (fn [_# [coords# value#]]
+                 (let [actual# (get-in info# coords#)]
+                   (if (not= actual# value#)
+                     (reduced {:type :fail
+                               :message ~msg
+                               :expected (list '~'= (list '~'get-in info# coords#) value#)
+                               :actual (list '~'not= actual# value#)})
+                     pass#)))
+               pass#)
               do-report)
          info#))))
