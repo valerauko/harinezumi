@@ -1,0 +1,11 @@
+{
+    "name": "harinezumi",
+    "image": "docker.io/library/clojure:temurin-21-lein-noble",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "betterthantomorrow.calva"
+            ]
+        }
+    }
+}
