@@ -7,8 +7,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: temurin
+          cache: maven
+      - uses: delaguardo/setup-clojure@13.0
+        with:
+          lein: 2.11.2
 
       - name: clj-kondo
         run: lein lint
