@@ -9,7 +9,7 @@
      ~@body
      (do-report {:type :fail
                  :message ~msg
-                 :expected (list '~'ex-data RuntimeException)
+                 :expected '~checks
                  :actual nil})
      (catch RuntimeException e#
        (let [info# (ex-data e#)
