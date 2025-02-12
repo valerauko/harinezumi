@@ -9,11 +9,15 @@
   :dependencies []
   :profiles {:dev {:dependencies [[org.clojure/clojure "1.12.0"]
                                   [org.clojure/tools.namespace "1.5.0"]
-                                  [lambdaisland/kaocha "1.91.1392"]]
+                                  [lambdaisland/kaocha "1.91.1392"]
+                                  [clj-kondo "2025.01.16"]]
                    :plugins [[lein-ancient "0.7.0"
-                              :exclusions [org.clojure/clojure]]]}
+                              :exclusions [org.clojure/clojure]]]
+                   :aliases {"lint" ["run" "-m" "clj-kondo.main"
+                                     "--config" ".clj-kondo/config.edn"
+                                     "--lint" "src" "test"]
+                             "test" ["run" "-m" "kaocha.runner"]}}
              :clj1.11 {:dependencies
                        [[org.clojure/clojure "1.11.4"]]}
              :clj1.12 {:dependencies
-                       [[org.clojure/clojure "1.12.0"]]}}
-  :aliases {"test" ["run" "-m" "kaocha.runner"]})
+                       [[org.clojure/clojure "1.12.0"]]}})
