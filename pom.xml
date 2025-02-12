@@ -4,7 +4,7 @@
   <groupId>net.valerauko</groupId>
   <artifactId>harinezumi</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <name>harinezumi</name>
   <description>Clojure test helper to check ex-info details</description>
   <url>https://github.com/valerauko/harinezumi</url>
@@ -18,7 +18,7 @@
     <url>https://github.com/valerauko/harinezumi</url>
     <connection>scm:git:git://github.com/valerauko/harinezumi.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/valerauko/harinezumi.git</developerConnection>
-    <tag>v1.0.0</tag>
+    <tag>v1.1.0</tag>
   </scm>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -79,6 +79,12 @@
       <groupId>lambdaisland</groupId>
       <artifactId>kaocha</artifactId>
       <version>1.91.1392</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>clj-kondo</groupId>
+      <artifactId>clj-kondo</artifactId>
+      <version>2025.01.16</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
